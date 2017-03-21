@@ -1,8 +1,11 @@
 <resources>
-    <string name="app_name">VidyalogyApp</string>
+    <string name="app_name">"SinghSir's"</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="New_Student"><u>New Student</u></string>
+    <string name="Forgot_Password"><u>Forgot Password?</u></string>
 
     <string name="action_settings">Settings</string>
 </resources>
