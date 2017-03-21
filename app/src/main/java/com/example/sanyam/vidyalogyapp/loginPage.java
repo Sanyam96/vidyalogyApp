@@ -8,6 +8,8 @@ import android.view.WindowManager;
 
 public class loginPage extends AppCompatActivity {
 
+    LoginDataBaseAdapter loginDataBaseAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
