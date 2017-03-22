@@ -1,5 +1,6 @@
 package com.example.sanyam.vidyalogyapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.ButtonBarLayout;
@@ -43,7 +44,10 @@ public class loginPage extends AppCompatActivity {
 
                 // check if the Stored password matches with  Password entered by user
                 if("1234567890".equals(usernameTxt.getText().toString()) && "123456".equals(pwdTxt.getText().toString()) ) {
-                        Toast.makeText(loginPage.this, "Congrats: Login Successfull", Toast.LENGTH_LONG).show();
+                    Toast.makeText(loginPage.this, "Congrats: Login Successfull", Toast.LENGTH_LONG).show();
+                    Intent quickRevision = new Intent(getApplicationContext(),MainActivity.class);
+                    startActivity(quickRevision);
+
                         //dialog.dismiss();
 
                 }
@@ -55,5 +59,10 @@ public class loginPage extends AppCompatActivity {
             }
         });
     }
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // Close The Database
+        loginDataBaseAdapter.close();
+    }
 }
