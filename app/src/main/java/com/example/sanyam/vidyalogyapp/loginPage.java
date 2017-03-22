@@ -2,11 +2,20 @@ package com.example.sanyam.vidyalogyapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.ButtonBarLayout;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.sanyam.vidyalogyapp.Database.LoginDataBaseAdapter;
 
 public class loginPage extends AppCompatActivity {
+
+    EditText usernameTxt, pwdTxt;
+    Button loginBtn;
 
     LoginDataBaseAdapter loginDataBaseAdapter;
 
@@ -14,20 +23,37 @@ public class loginPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login_page);
-        //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
+        // create a instance of SQLite Database
+        loginDataBaseAdapter=new LoginDataBaseAdapter(this);
+        loginDataBaseAdapter=loginDataBaseAdapter.open();
 
-/*            View decorView = getWindow().getDecorView();
-            // Hide both the navigation bar and the status bar.
-            // SYSTEM_UI_FLAG_FULLSCREEN is only available on Android 4.1 and higher, but as
-            // a general rule, you should design your app to hide the status bar whenever you
-            // hide the navigation bar.
-            int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                    | View.SYSTEM_UI_FLAG_FULLSCREEN;
-            decorView.setSystemUiVisibility(uiOptions);*/
+        loginBtn = (Button) findViewById(R.id.login);
+        usernameTxt = (EditText) findViewById(R.id.mobNumber);
+        pwdTxt = (EditText) findViewById(R.id.passwrd);
 
+        final String usernameString = usernameTxt.getText().toString();
+        final String passwordString = pwdTxt.getText().toString();
+        loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // fetch the Password form database for respective user name
+//                String storedPassword=loginDataBaseAdapter.getSinlgeEntry(userName);
+
+                // check if the Stored password matches with  Password entered by user
+                if("1234567890".equals(usernameTxt.getText().toString()) && "123456".equals(pwdTxt.getText().toString()) ) {
+                        Toast.makeText(loginPage.this, "Congrats: Login Successfull", Toast.LENGTH_LONG).show();
+                        //dialog.dismiss();
+
+                }
+                else
+                {
+                    Toast.makeText(loginPage.this, "User Name or Password does not match", Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
     }
+
 }
