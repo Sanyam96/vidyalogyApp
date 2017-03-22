@@ -13,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.example.sanyam.vidyalogyapp.Session.SessionManagement;
 
@@ -23,6 +25,9 @@ public class MainActivity extends AppCompatActivity
 
     // Session Manager Class
     SessionManagement session;
+
+    ListView listView ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +51,7 @@ public class MainActivity extends AppCompatActivity
 //            }
 //        });
 
+
         session = new SessionManagement(getApplicationContext());
 
         session.checkLogin();
@@ -67,6 +73,35 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+//        listView = (ListView) findViewById(R.id.list);
+//        // Defined Array values to show in ListView
+//        String[] values = new String[] { "Maths",
+//                "Computers",
+//                "Economics",
+//                "Biology",
+//                "Physics",
+//                "Chemistry",
+//                "DBMS",
+//                "JAVA"
+//        };
+//
+//        // Define a new Adapter
+//        // First parameter - Context
+//        // Second parameter - Layout for the row
+//        // Third parameter - ID of the TextView to which the data is written
+//        // Forth - the Array of data
+//
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.list, R.id.text111, values);
+//
+//
+//        // Assign adapter to ListView
+//        listView.setAdapter(adapter);
+
+
+
+
     }
 
     @Override

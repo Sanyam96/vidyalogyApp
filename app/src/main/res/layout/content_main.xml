@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#d3d0d0"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.sanyam.vidyalogyapp.MainActivity"
     tools:showIn="@layout/app_bar_main">
@@ -18,6 +19,173 @@
         <!--android:text="Hello World!" />-->
 
 
+    <!--<ListView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:id="@+id/list"-->
+        <!--android:layout_marginTop="57dp" />-->
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textStyle="bold|italic"
+        android:textSize="35dp"
+        android:text="Revise - In a Jiffy" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:id="@+id/scroll"
+        android:padding="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="0dp">
+            <Button
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimary"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Maths"
+                android:textSize="50dp"
+                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="10dp"
+                app:paddingStart="10dp"
+                app:paddingEnd="10dp"
+                android:gravity="center"
+                android:textStyle="italic|bold"
+                android:textColor="@android:color/white"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:background="@color/colorAccent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingBottom="10dp"
+                app:paddingStart="10dp"
+                app:paddingEnd="10dp"
+                android:text="Computers"
+                android:textSize="50dp"
+                android:textStyle="italic|bold"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:background="@android:color/holo_orange_light"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingBottom="10dp"
+                app:paddingStart="10dp"
+                app:paddingEnd="10dp"
+                android:text="Economics"
+                android:textSize="50dp"
+                android:gravity="center"
+                android:textStyle="italic|bold"
+                android:textColor="@android:color/white"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingBottom="10dp"
+                android:background="@android:color/holo_green_light"
+                app:paddingStart="10dp"
+                app:paddingEnd="10dp"
+                android:text="Biology"
+                android:textSize="50dp"
+                android:textStyle="italic|bold"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingBottom="10dp"
+                android:background="@android:color/holo_blue_bright"
+                app:paddingStart="10dp"
+                app:paddingEnd="10dp"
+                android:text="Physics"
+                android:textSize="50dp"
+                android:textStyle="italic|bold"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                app:paddingStart="10dp"
+                app:paddingEnd="10dp"
+                android:background="@android:color/holo_red_light"
+                android:text="Chemistry"
+                android:textSize="50dp"
+                android:textStyle="italic|bold"
+                android:textColor="@android:color/white"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="DBMS"
+                android:paddingBottom="10dp"
+                app:paddingStart="10dp"
+                android:background="@android:color/holo_blue_dark"
+                app:paddingEnd="10dp"
+                android:textSize="50dp"
+                android:textStyle="italic|bold"
+                android:textColor="@android:color/white"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="JAVA"
+                android:background="@android:color/holo_purple"
+                android:textSize="50dp"
+                android:textStyle="italic|bold"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:paddingBottom="10dp"
+                app:paddingStart="10dp"
+                app:paddingEnd="10dp"
+                android:layout_centerHorizontal="true"/>
+
+
+        </LinearLayout>
+    </ScrollView>
 
 
 
